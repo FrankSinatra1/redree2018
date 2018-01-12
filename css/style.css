@@ -570,11 +570,13 @@ header {
 	font-size: 14px;
 }
 
-/* end FIRST SCREEN*/
+/* _____________________________end FIRST SCREEN________________________________*/
+
 
 /*************************************************************************/
 
-/* START THIRD SCREEN*/
+
+/* ________________________________START THIRD SCREEN________________________________*/
 
 .thirdScreen h3 {
 	font-size: 90px;
@@ -719,10 +721,10 @@ header {
 	text-transform: none;
 	padding: 0 20px;
 }
+/* ________________________________________________END THIRD SCREEN________________________________________________*/
 
 
-/* END THIRD SCREEN*/
-
+/*________________________________________________OUR WORKS________________________________________________*/
 .wrapper_ourWorks {
     display: -webkit-flex;
     display: -moz-flex;
@@ -804,7 +806,8 @@ header {
     border-radius: 15px;
 }
 
-/* START FOURTH SCREEN*/
+
+/* _________________________________________START FOURTH SCREEN_________________________________________*/
 
 .fourthScreen h3 {
 	font-size: 90px;
@@ -892,10 +895,10 @@ header {
 .testform {
     display: none !important;
 }
+/* ________________________________________END FOURTH SCREEN________________________________________*/
 
-/* END FOURTH SCREEN*/
 
-/* START FIFTH SCREEN*/
+/* ________________________________________START FIFTH SCREEN________________________________________*/
 
 .fifthScreen h3 {
 	font-size: 90px;
@@ -1058,37 +1061,10 @@ header {
 	max-width: 190px;
 }
 
-/*
-@media screen and (max-width:1680px) and (min-width: 1300px) {
-	.workersWrap__item:nth-child(4) {
-		margin-right: 0;
-	}
-	.workersWrap__item:last-child {
-		margin-right: 0;
-	}
-	.workersWrap {
-		max-width: 1185px;
-		margin: 0 auto;
-	}
-}
+/*______________________________END FIFTH SCREEN____________________________*/
 
-@media screen and (max-width:1301px) and (min-width: 1263px) {
-	.workersWrap__item:nth-child(4) {
-		margin-right: 0;
-	}
-	.workersWrap__item:last-child {
-		margin-right: 0;
-	}
-	.workersWrap {
-		max-width: 1185px;
-		margin: 0 auto;
-	}
-}
-*/
 
-/* END FIFTH SCREEN*/
-
-/* START SIXTH SCREEN*/
+/* _________________________________START SIXTH SCREEN_________________________*/
 
 .sixthScreen h3 {
 	font-size: 90px;
@@ -1165,12 +1141,10 @@ header {
 	line-height: 24px;
 	margin-bottom: 0;
 }
+/*______________________________END SIXTH SCREEN___________________*/
 
 
-
-/* END SIXTH SCREEN*/
-
-/* START 7 SCREEN*/
+/* _______________________________START 7 SCREEN_____________________*/
 
 .seventhScreen {}
 
@@ -1279,10 +1253,10 @@ header {
 	width: 100%;
 	max-width: 830px;
 }
+/*_________________________________________END 7 SCREEN__________________________________________*/
 
-/* END 7 SCREEN*/
 
-/*START FOOTER*/
+/*________________________________________START FOOTER____________________________________________*/
 
 .wrapper__footer {
 	display: -webkit-flex;
@@ -1360,14 +1334,11 @@ header {
 	text-decoration: underline;
 	font-family: "Ubuntu";
 }
-/*END FOOTER*/
+/*_______________________________________________END FOOTER__________________________________*/
 
 
 
-
-/*STET WORK PAGE*/
-
-
+/*______________________________________________STET WORK PAGE____________________________________*/
 
 .stepworkPage {
     text-align: center;
@@ -1549,10 +1520,11 @@ header {
     margin-bottom: 30px;
 }
 
-/*END STET WORK PAGE*/
+/*___________________________________END STET WORK PAGE_________________________________*/
 
 
-/*ERROR PAGE*/
+
+/*________________________________________ERROR PAGE__________________________*/
 
 .wrapper_error_errorPage {
     display: -webkit-flex;
@@ -1605,10 +1577,12 @@ width: 35%;
     color: #fff;
 }
 
+/*________________________________________END ERROR PAGE_____________________________*/
 
-/*END ERROR PAGE*/
 
-/*CARD TOVAR PAGE*/
+
+
+/*_______________________________________CARD TOVAR PAGE______________________________*/
 
 .titleText_cardtovarPage {
     margin: -126px auto 0;
@@ -1770,20 +1744,13 @@ width: 35%;
     color: #6448f0;
 }
 
+/*___________________________________________END CARD TOVAR PAGE__________________________*/
 
 
 
 
-/*END CARD TOVAR PAGE*/
+/*___________________________________COUNT PRICE PAGE_____________________________________*/
 
-
-/*COUNT PRICE PAGE*/
-
-
-
-/* Style the buttons that are used to open the tab content */
-
-/* Style the tab content */
 .wrapper_tabcontent {
     display: none;
     justify-content: space-between;
@@ -1835,7 +1802,7 @@ label.error {
 	display: none !important;
 }
 
-/*new style for tabs*/
+/*__________________________________FUCKING TABS_________________________________*/
 .tabs {
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -1919,6 +1886,7 @@ label.error {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	width: 100%;
 }
 
 .tabcontent_form .checkForm input {
@@ -1928,7 +1896,6 @@ label.error {
 .form_inputLeft {
 	margin-right: 20px;
 }
-
 
 .tabs__caption li:not(.active) {
 	cursor: pointer;
@@ -1966,7 +1933,7 @@ label.error {
 	justify-content: space-between;
 }
 .tabs__content {
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    animation: fadeEffect 1s; 
 }
 
 @keyframes fadeEffect {
@@ -2004,10 +1971,6 @@ label.error {
 
 .checkenedWrap p:first-child {
 	font-size: 1.1em;
-}
-
-.checkenedWrap .checkForm {
-	width: 100%;
 }
 
 .tabcontent_chekBox {
@@ -2121,13 +2084,13 @@ label.error {
 	    width: 100%;
 	    height: 100%;
 	    transform: scale(20);
-	    letter-spacing: 10em;     /* IE 9 fix */
-	    -ms-transform: scale(20); /* IE 9 fix */
+	    letter-spacing: 10em;     
+	    -ms-transform: scale(20); 
 	    opacity: 0;
 	    cursor: pointer
 }
 .tabs__content {
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    animation: fadeEffect 1s; 
 }
 
 @keyframes fadeEffect {
@@ -2135,7 +2098,7 @@ label.error {
     to {opacity: 1;}
 }
 
-/*END COUNT PRICE PAGE*/
+/*______________________________________FUCKING END COUNT PRICE PAGE______________________________________*/
 
 @media only screen and (max-width: 1480px) {
     body {

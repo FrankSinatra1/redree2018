@@ -7,7 +7,7 @@ $(document).ready(function () {
 	var firstScreenRight = $(".firstScreen__right");
 	var mainMenu = $(".mainMenu");
 	$(mainMenu).hide();
-    // FUCKING FACE
+    // _____________________________FUCKING FACE CAROUSEL_________________________
     $(".owl-carousel_fifthScreen").owlCarousel({
         loop: true,
         autoplay: true,
@@ -26,8 +26,11 @@ $(document).ready(function () {
                 },
         },
     });
+        // _____________________________FUCKING FACE CAROUSEL_________________________
     
-    // FUCKING CAROUSEL OUR WORKS
+    
+    
+    // _______________________FUCKING CAROUSEL OUR WORKS___________________
     $(".slider_ourWorks").owlCarousel({
         loop: true,
         items: 1,
@@ -48,17 +51,25 @@ $(document).ready(function () {
             }
         }
     });
-
-// FUCKING YAKOR SCROLL
+    // _______________________FUCKING CAROUSEL OUR WORKS___________________
+    
+    
+    
+    
+// ___________________________FUCKING YAKOR SCROLL______________________
     $(".header__right").on("click","a", function (event) {
            event.preventDefault();
            var id  = $(this).attr('href'),
            top = $(id).offset().top;
           $('body,html').animate({scrollTop: top-50}, 1200);
     });
-
+// ___________________________FUCKING YAKOR SCROLL______________________
     
-// FUCKING POPUP
+    
+    
+    
+    
+//_____________________FUCKING POPUP___________________________
 (function () {
     
     $(".popupButton").click(function() {
@@ -83,7 +94,6 @@ $(document).ready(function () {
         });
     });
     
-    
     var main = $(".mainPopup")
 
     $(document).mouseup(function (e){ // событие клика по веб-документу
@@ -103,8 +113,12 @@ $(document).ready(function () {
       });
 
 })();
+//_____________________FUCKING POPUP___________________________
     
     
+    
+    
+// ________________FUCKING TAAAAAABBSSSSS______________________
 (function($) {
     $(function() {
 
@@ -124,8 +138,11 @@ $(document).ready(function () {
 
     });
     })(jQuery);
+    // ________________FUCKING TAAAAAABBSSSSS______________________
     
-	// Гамбургер еже
+    
+    
+	// ____________________Гамбургер еже_______________________
 	(function () {
 
 		"use strict";
@@ -166,91 +183,124 @@ $(document).ready(function () {
 	})();
     
     
-    // FUCKING FORM
-    
-    
-        $("#contactForm").submit(function() {
-    		$.ajax({
-    			type: "POST",
-    			url: "telegram.php",
-    			data: $(this).serialize()
-    		}).done(function() {
-    			$(this).find("input").val("");
-                $("#contactForm").toggleClass("testform");
-    		});
-    		  return false;
-    	});
-    
-    
-$( "#form_PageCountPrice" ).validate({
-  rules: {
-    name_formPageCountPrice: {
-      required: true,
-      minlength: 2,
-    },
-  email_formPageCountPrice: {
-    required: true,
-    email: true,
-    minlength: 8,
-  },
-  firm_formPageCountPrice: {
-    required: true,
-    minlength: 2,
-  },
-  doljnost_formPageCountPrice: {
-    required: true,
-    minlength: 4,
-  },
-  nameCompany_formPageCountPrice: {
-    required: true,
-    minlength: 4,
-  },
-  phone_formPageCountPrice: {
-    required: true,
-    minlength: 11,
-  },
-  },
-});
-    
-$( "#form_formPageIndex" ).validate({
-rules:{
-    name_formPageIndex: {
-      required: true,
-      minlength: 2,
-    },
-     email_formPageIndex: {
-    required: true,
-    email: true,
-    minlength: 8,
-  },
-  phone_formPageIndex: {
-    required: true,
-    minlength: 11,
-  },
-}
-});
-    
-$( "#form_formPageUslugi" ).validate({
-rules:{
-    name_formPageUslugi: {
-      required: true,
-      minlength: 2,
-    },
-     email_formPageUslugi: {
-    required: true,
-    email: true,
-    minlength: 8,
-  },
-  phone_formPageUslugi: {
-    required: true,
-    minlength: 11,
-  },
-}
-});
+// ____________________Гамбургер еже_______________________
     
     
     
-    // FUCKING VALIDATION
+    
+//    __________________________FUCKING VALIDATION_____________________________
+    (function(){
+        $( "#form_PageCountPrice" ).validate({
+              rules: {
+                name_formPageCountPrice: {
+                  required: true,
+                  minlength: 2,
+                },
+              email_formPageCountPrice: {
+                required: true,
+                email: true,
+                minlength: 8,
+              },
+              firm_formPageCountPrice: {
+                required: true,
+                minlength: 2,
+              },
+              doljnost_formPageCountPrice: {
+                required: true,
+                minlength: 4,
+              },
+              nameCompany_formPageCountPrice: {
+                required: true,
+                minlength: 4,
+              },
+              phone_formPageCountPrice: {
+                required: true,
+                minlength: 11,
+              },
+              },
+            });
+
+            $( "#form_formPageIndex" ).validate({
+            rules:{
+                name_formPageIndex: {
+                  required: true,
+                  minlength: 2,
+                },
+                 email_formPageIndex: {
+                required: true,
+                email: true,
+                minlength: 8,
+              },
+              phone_formPageIndex: {
+                required: true,
+                minlength: 11,
+              },
+            }
+            });
+
+            $( "#form_formPageUslugi" ).validate({
+            rules:{
+                name_formPageUslugi: {
+                  required: true,
+                  minlength: 2,
+                },
+                 email_formPageUslugi: {
+                required: true,
+                email: true,
+                minlength: 8,
+              },
+              phone_formPageUslugi: {
+                required: true,
+                minlength: 11,
+              },
+            }
+            });
+
+            $( "#contactForm_formPageIndex" ).validate({
+            rules:{
+                name_contactForm_formPageIndex: {
+                  required: true,
+                  minlength: 2,
+                },
+                 email_contactForm_formPageIndex: {
+                required: true,
+                email: true,
+                minlength: 8,
+              },
+              phone_contactForm_formPageIndex: {
+                required: true,
+                minlength: 11,
+              },
+            }
+            });
+
+            $( "#formMap_formPageIndex" ).validate({
+            rules:{
+                name_formMap_formPageIndex: {
+                  required: true,
+                  minlength: 2,
+                },
+                 email_formMap_formPageIndex: {
+                required: true,
+                email: true,
+                minlength: 8,
+              },
+              phone_formMap_formPageIndex: {
+                required: true,
+                minlength: 11,
+              },
+            }
+            });
+
+    })();
+   //    __________________________FUCKING VALIDATION_____________________________ 
+    
+    
+    
+    
+    
+    
+    // __________________________FUCKING MASK________________________
     /*
     jQuery Masked Input Plugin
     Copyright (c) 2007 - 2015 Josh Bush (digitalbush.com)
@@ -267,7 +317,7 @@ rules:{
         $("#phone5").mask("+7 (999) 999-9999");
         $("#phone6").mask("+7 (999) 999-9999");
    });
-
+    // __________________________FUCKING MASK________________________
     
 	// ***********************************************
 });
