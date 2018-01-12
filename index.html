@@ -22,6 +22,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 	<script src="js/SmoothScroll.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
 	<script type="text/javascript" >
 	    (function (d, w, c) {
 	        (w[c] = w[c] || []).push(function() {
@@ -60,10 +61,10 @@
                     <h2>Заполните формы.</h2>
                     <p>Мы свяжемся с вами в ближайшее время.</p>
                     <i class="material-icons close_popup">&#xE5CD;</i>
-                    <form action="#" method="post">
-                        <input type="text" placeholder="Имя" required="">
-                        <input type="text" id="phone3" placeholder="Телефон" required="">
-                        <input type="text" placeholder="Email" required="">
+                    <form action="#" method="post" id="form_formPageIndex">
+                        <input type="text" placeholder="Имя" name="name_formPageIndex">
+                        <input type="text" id="phone3" placeholder="Телефон" name="phone_formPageIndex">
+                        <input type="text" placeholder="Email" name="email_formPageIndex">
                         <button class="button">Отправить заявку</button>
                     </form>
                 </div>
@@ -185,7 +186,7 @@
                     <h4>Корпоративный сайт</h4>
                     <p>Корпоративный сайт - это визитная карточка вашей компании. Создаем площадку для взаимодействия компании с клиентами, партнерами, сотрудниками. Расскажем об услугах, соберем данные о посетителях, организуем обратную связь с ними.</p>
                     <div class="serviceWrapButt">
-                        <a href="#" class="button">Расчитать стоимость</a>
+                        <a href="countPrice.html#tab2" class="button">Расчитать стоимость</a>
                     </div>
                 </div>
 

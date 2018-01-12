@@ -105,6 +105,26 @@ $(document).ready(function () {
 })();
     
     
+(function($) {
+    $(function() {
+
+        $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+            $(this)
+                .addClass('active').siblings().removeClass('active')
+                .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+        });
+
+        var tabIndex = window.location.hash.replace('#tab','')-1;
+        if (tabIndex != -1) $('ul.tabs__caption li').eq(tabIndex).click();
+
+        $('a[href*=#tab]').click(function() {
+            var tabIndex = $(this).attr('href').replace(/(.*)#tab/, '')-1;
+            $('ul.tabs__caption li').eq(tabIndex).click();
+        });
+
+    });
+    })(jQuery);
+    
 	// Гамбургер еже
 	(function () {
 
@@ -144,28 +164,6 @@ $(document).ready(function () {
 		}
 
 	})();
-
-//         function openCity(evt, cityName) {
-//     // Declare all variables
-//     var i, tabcontent, tablinks;
-
-//     // Get all elements with class="tabcontent" and hide them
-//     tabcontent = document.getElementsByClassName("tabcontent");
-//     for (i = 0; i < tabcontent.length; i++) {
-//         tabcontent[i].style.display = "none";
-//     }
-
-//     // Get all elements with class="tablinks" and remove the class "active"
-//     tablinks = document.getElementsByClassName("tablinks");
-//     for (i = 0; i < tablinks.length; i++) {
-//         tablinks[i].className = tablinks[i].className.replace(" active", "");
-//     }
-
-//     // Show the current tab, and add an "active" class to the button that opened the tab
-//     document.getElementById(cityName).style.display = "block";
-//     evt.currentTarget.className += " active";
-// }
-
     
     
     // FUCKING FORM
@@ -182,6 +180,73 @@ $(document).ready(function () {
     		});
     		  return false;
     	});
+    
+    
+$( "#form_PageCountPrice" ).validate({
+  rules: {
+    name_formPageCountPrice: {
+      required: true,
+      minlength: 2,
+    },
+  email_formPageCountPrice: {
+    required: true,
+    email: true,
+    minlength: 8,
+  },
+  firm_formPageCountPrice: {
+    required: true,
+    minlength: 2,
+  },
+  doljnost_formPageCountPrice: {
+    required: true,
+    minlength: 4,
+  },
+  nameCompany_formPageCountPrice: {
+    required: true,
+    minlength: 4,
+  },
+  phone_formPageCountPrice: {
+    required: true,
+    minlength: 11,
+  },
+  },
+});
+    
+$( "#form_formPageIndex" ).validate({
+rules:{
+    name_formPageIndex: {
+      required: true,
+      minlength: 2,
+    },
+     email_formPageIndex: {
+    required: true,
+    email: true,
+    minlength: 8,
+  },
+  phone_formPageIndex: {
+    required: true,
+    minlength: 11,
+  },
+}
+});
+    
+$( "#form_formPageUslugi" ).validate({
+rules:{
+    name_formPageUslugi: {
+      required: true,
+      minlength: 2,
+    },
+     email_formPageUslugi: {
+    required: true,
+    email: true,
+    minlength: 8,
+  },
+  phone_formPageUslugi: {
+    required: true,
+    minlength: 11,
+  },
+}
+});
     
     
     

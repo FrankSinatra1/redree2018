@@ -15,6 +15,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 	<script src="js/SmoothScroll.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
 	<script src="js/main.js"></script>
 </head>
 <body>
@@ -23,7 +24,7 @@
 	<div class="padBlock">
 		<header>
 			<div class="header__left">
-				<a href="#"><img src="images/logo.png" alt=""></a>
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
 			</div>
 			<div class="header__right">
 				<ul>
@@ -37,7 +38,7 @@
 			</div>
 		</header>
 
-		<section class="firstScreen">
+		<section class="firstScreen firstScreenCoutnPrice_Page">
 			<div class="stepworkPage">
 				<h3>Рассчитать стоимость</h3>
 				<div class="firstScreenMiddle__wrapp">
@@ -45,67 +46,70 @@
 				</div>
 			</div>
 		</section>
+		
+<section class="wrapper_tabs">
+	<div class="tabs">
 
-		<section class="wrapper_tabs">
-			<div class="tab">
-			  	<button class="tablinks" onclick="openCity(event, 'promo_site')">Промо-сайт</button>
-			  	<button class="tablinks" onclick="openCity(event, 'corpor_site')">Корпоративный сайт</button>
-			  	<button class="tablinks" onclick="openCity(event, 'service_site')">Сервис</button>
-			  	<button class="tablinks" onclick="openCity(event, 'internet_site')">Интернет-магазин</button>
-			  	<button class="tablinks" onclick="openCity(event, 'mobile_site')">Мобильные приложения</button>
-			  	<button class="tablinks" onclick="openCity(event, 'brending_site')">Брендинг</button>
-			  	<button class="tablinks" onclick="openCity(event, 'promo_site_video')">Промо ролики</button>
-			  	<hr>
-			</div>
+		<ul class="tabs__caption">
+			<li class="active">Промо-сайт</li>
+			<li>Корпоративный сайт</li>
+			<li>Сервис</li>
+			<li>Интернет-магазин</li>
+			<li>Мобильные приложения</li>
+			<li>Брендинг</li>
+			<li>Промо ролики</li>
+			<hr>
+		</ul>
 
-			<!-- Tab content -->
-			<div id="promo_site" class="wrapper_tabcontent">
+		<!-- Tab content -->
+		<div class="tabs__content active">
+			<form action="#" method="post" class="formWrapper">
 				<div class="tabcontent_chekBox">
 					<p>Выберите нужные поля и заполните форму.</p>
 					<div class="size_checkened">
 						<div class="checkenedWrap">
-							<form action="#" method="post" class="checBox_form">
+							<div class="checBox_form checkForm">
 						                  <p>Что?</p>
 						                  <label><input type="checkbox" name="size" class="input--man"><p class="man"><span>Веб-сайт</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--woman"><p class="man"><span>Дизайн</span></p></label>
-						              </form>
-						              	<form action="#" method="post" class="checBox_form">
+						              </div>
+						              	<div class="checBox_form checkForm">
 						                  <p>Сроки на разработку</p>
 						                  <label><input type="checkbox" name="size" class="input--man"><p class="man"><span>Реальные сроки</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--woman"><p class="man"><span>Важен процесс</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--woman"><p class="man"><span>Срочно нужен</span></p></label>
-						              </form>
+						              </div>
 						</div>
 						<div class="checkenedWrap">
-							<form action="#" method="post" class="checBox_form">
+							<div class="checBox_form checkForm">
 						                  <p>Планируемый бюджет</p>
 						                  <label><input type="checkbox" name="size" class="input--man"><p class="man"><span>10-30 тыс. руб.</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--woman"><p class="man"><span>30-50 тыс. руб.</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--man"><p class="man"><span>50-80 тыс. руб.</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--man"><p class="man"><span>80-100 тыс. руб.</span></p></label>
-						              </form>
-						              <form action="#" method="post" class="checBox_form">
+						              </div>
+						              <div class="checBox_form checkForm">
 						                  <p>Адаптивность</p>
 						                  <label><input type="checkbox" name="size" class="input--man"><p class="man"><span>Десктопная версия</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--woman"><p class="man"><span>Планшетная версия</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--man"><p class="man"><span>Телефонная версия</span></p></label>
-						              </form>
+						              </div>
 						</div>   
 						<div class="checkenedWrap">
-							<form action="#" method="post" class="checBox_form">
+							<div class="checBox_form checkForm">
 						                  <p>Система управления</p>
 						                  <label><input type="checkbox" name="size" class="input--man"><p class="man"><span>Не нужна</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--woman"><p class="man"><span>Wordpress</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--man"><p class="man"><span>Joomla</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--woman"><p class="man"><span>Индивидуальная</span></p></label>
-						              </form>
-							<form action="#" method="post" class="checBox_form">
+						              </div>
+							<div class="checBox_form checkForm">
 						                  <p>Как Вы о нас узнали?</p>
 						                  <label><input type="checkbox" name="size" class="input--man"><p class="man"><span>Наружная реклама</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--woman"><p class="man"><span>Социальные сети</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--man"><p class="man"><span>По рекомендации</span></p></label>
 						                  <label><input type="checkbox" name="size" class="input--woman"><p class="man"><span>От сотридников RedRee</span></p></label>
-						              </form>
+						      </div>
 						</div>
 						<div class="checkenedWrap">
 							    <label class="file_upload">
@@ -117,23 +121,69 @@
 				</div>
 				<div class="tabcontent_form">
 					<p>Заполните форму</p>
-					<form action="" method="post">
+					<div class="checkForm">
 						<div class="form_inputLeft">
-							<input type="text" placeholder="Введите ваше имя">
-							<input type="text" placeholder="Введите название фирмы">
-							<input type="text" placeholder="Введите свою должность">
-							<button class="button">Отправить</button>
+							<input type="text" placeholder="Введите ваше имя" name="name_formPageCountPrice" required="">
+							<input type="text" placeholder="Введите название фирмы" name="firm_formPageCountPrice" required="">
+							<input type="text" placeholder="Введите свою должность" name="doljnost_formPageCountPrice" required="">
+							<button class="button disabledBut">Отправить</button>
 						</div>
 						<div class="form_inputRight">
-							<input type="text" placeholder="Введите сайт компании">
-							<input type="text" id="phone5" placeholder="Введите номер телефона">
-							<input type="email" placeholder="Введите email">
+							<input type="text" placeholder="Введите сайт компании" name="nameCompany_formPageCountPrice" required="">
+							<input type="text" id="phone5" placeholder="Введите номер телефона" name="phone_formPageCountPrice" required="">
+							<input type="email" placeholder="Введите email" name="email_formPageCountPrice" required="">
 						</div>
-					</form>
-				</div>
+					</div>
+				  </div>
+                </form>
 			</div>
-		</section>
+			<div class="tabs__content">
+			    <div class="wrap_noneBlock">
+			        <h1>
+			        Страница находится на стадии разработки. <br>Просим у наших многочисленных посетителей прощения.
+			        </h1>
+			    </div>
+			</div>
+            <div class="tabs__content">
+			    <div class="wrap_noneBlock">
+			        <h1>
+			        Страница находится на стадии разработки. <br>Просим у наших многочисленных посетителей прощения.
+			        </h1>
+			    </div>
+			</div>
+			<div class="tabs__content">
+			    <div class="wrap_noneBlock">
+			        <h1>
+			        Страница находится на стадии разработки. <br>Просим у наших многочисленных посетителей прощения.
+			        </h1>
+			    </div>
+			</div>
+			<div class="tabs__content">
+			    <div class="wrap_noneBlock">
+			        <h1>
+			        Страница находится на стадии разработки. <br>Просим у наших многочисленных посетителей прощения.
+			        </h1>
+			    </div>
+			</div>
+			<div class="tabs__content">
+			    <div class="wrap_noneBlock">
+			        <h1>
+			        Страница находится на стадии разработки. <br>Просим у наших многочисленных посетителей прощения.
+			        </h1>
+			    </div>
+			</div>
+			<div class="tabs__content">
+			    <div class="wrap_noneBlock">
+			        <h1>
+			        Страница находится на стадии разработки. <br>Просим у наших многочисленных посетителей прощения.
+			        </h1>
+			    </div>
+			</div>
 
+	</div>
+</section>
+
+    
 		<footer class="wrapper__footer">
 			<div class="wrap__footer">
 				<div class="footer_logo">
@@ -167,21 +217,5 @@
 		</footer>
 	</div>
 	
-
-			<script>
-				function openCity(evt, cityName) {
-				    var i, wrapper_tabcontent, tablinks;
-				    wrapper_tabcontent = document.getElementsByClassName("wrapper_tabcontent");
-				    for (i = 0; i < wrapper_tabcontent.length; i++) {
-				        wrapper_tabcontent[i].style.display = "none";
-				    }
-				    tablinks = document.getElementsByClassName("tablinks");
-				    for (i = 0; i < tablinks.length; i++) {
-				        tablinks[i].className = tablinks[i].className.replace(" active", "");
-				    }
-				    document.getElementById(cityName).style.display = "flex";
-				    evt.currentTarget.className += " active";
-				}
-			</script>
 </body>
 </html>

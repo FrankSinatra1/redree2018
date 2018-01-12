@@ -846,7 +846,7 @@ header {
     width: 100%;
 }
 
-.form--fourthScreen form input, .seventhScreenInfo__form form input, .popup form input, .tabcontent_form form input {
+.form--fourthScreen form input, .seventhScreenInfo__form form input, .popup form input, .tabcontent_form input {
     outline: 0;
     height: 50px;
     padding-left: 15px;
@@ -862,11 +862,11 @@ header {
     width: 24%;
 }
 
-.form--fourthScreen form input::placeholder, .seventhScreenInfo__form form input::placeholder, .popup form input::placeholder, .tabcontent_form form input::placeholder {
+.form--fourthScreen form input::placeholder, .seventhScreenInfo__form form input::placeholder, .popup form input::placeholder, .tabcontent_form input::placeholder {
     color: #9c9c9c;
-}.form--fourthScreen form input:focus::placeholder, .seventhScreenInfo__form form input:focus::placeholder, .popup form input:focus::placeholder, .tabcontent_form form input:focus::placeholder {
+}.form--fourthScreen form input:focus::placeholder, .seventhScreenInfo__form form input:focus::placeholder, .popup form input:focus::placeholder, .tabcontent_form input:focus::placeholder {
     color: #141414;
-}.form--fourthScreen form input:focus, .seventhScreenInfo__form form input:focus, .popup form input:focus, .tabcontent_form form input:focus {
+}.form--fourthScreen form input:focus, .seventhScreenInfo__form form input:focus, .popup form input:focus, .tabcontent_form input:focus {
     border: 1px solid #141414;
 }
 
@@ -1779,68 +1779,9 @@ width: 35%;
 
 /*COUNT PRICE PAGE*/
 
-.wrapper_tabs {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: #fff;
-	padding: 30px;
-	border-radius: 15px;
-	overflow: hidden;
-}
 
-.tab {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: space-between;
-	width: 70%;
-	position: relative;
-}.tab hr {
-	position: absolute;
-	width: 200%;
-	bottom: -25px;
-	left: -30%;
-	height: 1px;
-	background: #bebebe;
-	border: none;
-}
 
 /* Style the buttons that are used to open the tab content */
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s;
-    font-family: Ubuntu;
-    font-weight: 500;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-	color: #6448f0;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-	color: #6448f0;
-}
-
-#promo_site {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;	
-}
 
 /* Style the tab content */
 .wrapper_tabcontent {
@@ -1857,9 +1798,9 @@ width: 35%;
 	display: flex;
 }
 
-.tabcontent_form form input {
+.tabcontent_form input {
 	margin-bottom: 20px;
-}.tabcontent_form form button {width: 100%;}
+}.tabcontent_form button {width: 100%;}
 
 .form_inputLeft {
 	margin-right: 20px;
@@ -1882,8 +1823,157 @@ width: 35%;
 .tabcontent_form p {
 	font-family: Montserrat;
 	font-weight: bold;
-	margin-bottom: 20px;
+	margin-bottom: 14px;
+    font-size: 1.1em;
 }
+
+input.error {
+	border: 1px solid #ff4747 !important;
+}
+
+label.error {
+	display: none !important;
+}
+
+/*new style for tabs*/
+.tabs {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 0 30px 30px 30px;
+    background: #fff;
+}
+
+.tabs hr {
+	display: block;
+	position: absolute;
+	width: 200%;
+	bottom: -30px;
+	left: -30%;
+	height: 1px;
+	background: #bebebe;
+	border: none;
+}
+.tabs__caption {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	width: 70%;
+	position: relative;
+	margin: 30px 0;
+	list-style: none;
+	padding: 0;
+}
+
+.tabs__caption .active:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    top: 44px;
+    height: 23px;
+    width: 23px;
+    background: #fff;
+    cursor: default;
+    z-index: 2;
+    border-right: 1px solid #bebebe;
+    border-top: 1px solid #bebebe;
+    display: block;
+}
+.tabs__caption li {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Ubuntu;
+    font-weight: 500;
+    font-size: .9em;
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+}
+.tabs__content .formWrapper {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.tabcontent_form .checkForm {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.tabcontent_form .checkForm input {
+	margin-bottom: 20px;
+}.tabcontent_form .checkForm button {width: 100%;}
+
+.form_inputLeft {
+	margin-right: 20px;
+}
+
+
+.tabs__caption li:not(.active) {
+	cursor: pointer;
+}
+.tabs__caption li:not(.active):hover {
+	color: #6448f0;
+}
+.tabs__caption .active {
+	color: #6448f0;
+}
+
+.tabs__content {
+	display: none;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.tabs__content .wrap_noneBlock {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}.tabs__content .wrap_noneBlock h1 {
+    margin: 200px 0;
+    text-align: center;
+    line-height: 35px;
+}
+
+.tabs__content.active {
+	display: flex;
+	justify-content: space-between;
+}
+.tabs__content {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 
 /*radio button*/
 
@@ -1895,6 +1985,11 @@ width: 35%;
 	display: flex;
 	flex-direction: column;;
     margin-top: 30px;
+}
+
+.buttonActiveEriangle {
+    position: absolute;
+    bottom: -50px;
 }
 
 .checkenedWrap {
@@ -1911,7 +2006,7 @@ width: 35%;
 	font-size: 1.1em;
 }
 
-.checkenedWrap form {
+.checkenedWrap .checkForm {
 	width: 100%;
 }
 
@@ -1929,7 +2024,6 @@ width: 35%;
 }
 
 .man, .woman {
-	/* display: inline-block; */
 	position: relative;
 	margin-bottom: 15px;
 }
@@ -2032,11 +2126,10 @@ width: 35%;
 	    opacity: 0;
 	    cursor: pointer
 }
-.wrapper_tabcontent {
+.tabs__content {
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
 
-/* Go from zero to full opacity */
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
@@ -2054,7 +2147,7 @@ width: 35%;
         font-size: .9em;
         padding:  0 15px;
     }
-    .form--fourthScreen form input, .seventhScreenInfo__form form input, .tabcontent_form form input {
+    .form--fourthScreen form input, .seventhScreenInfo__form form input, .tabcontent_form input {
         height: 42px;
     }
     .serviceWrapButt .button {
